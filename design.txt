@@ -1,0 +1,20 @@
+﻿Nawon Choi (nawonc)
+
+
+Overview:
+This project uses tkinter to create a game where the objective is to find as many words as possible within the given time limit. A player can create a word by either using these 16 keys [['1','2','3','4'],
+['q','w','e','r'],
+['a','s','d','f'],
+['z','x','c','v']], which correspond to the arrangement of the blocks on the board, or using the mouse to click and drag on the desired blocks. This game was heavily influenced by the mobile game app called “Word Streak” by Zynga.
+
+
+Scoring Points: 
+        Points are scored based on the sum of the point values of each letter of the word. Additionally, the board is programmed so that there is always exactly 5 vowels, so that roughly 100 words can be made in every game. The letters on the board are chosen randomly and are based on Scrabble letter distributions. Based on the point value of the word scored, an encouragement pops up on the screen for about one second. A leaderboard was created so that the top five high scores can be recorded each time the game is run. A player can score points by clicking and dragging across the letter blocks in order. When the mouse is released, the program checks if the combination of letters is a word. In the keyboard feature, the user presses “space” to indicate that a word has been proposed. 
+
+
+Powerups:
+The game includes two power ups, including “Inspire” and “Freeze.” Freeze stops the timer for 15 seconds, while Inspire reveals five unfound words from the given board and displays it for 7 seconds. The five unfound words are chosen from a set of all possible words from the given board. The set of all possible words is found using a backtracking algorithm that searches through every possible path on the board. This algorithm was made more efficient by stopping the search in a certain path if the path had no words that could be formed from it. For instance if the current path were “AAA,” the algorithm would stop making combinations in that path and backtrack. 
+
+
+User Interface:
+        The click and drag feature used to create words would be tricky on diagonals, so the boundaries of each block when clicking and dragging is actually smaller than the drawn cells. In addition, lines are drawn in the order that the letters are chosen to give the player a better visualization of the word being formed.
